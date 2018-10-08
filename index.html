@@ -6,21 +6,23 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body style="background: whitesmoke">
-<div class="titulo">Calculadora de IMC</div>
-<div class="container" id="contForm">
-    <div type="card">
-        <p>Peso: </p>
-        <input type="text" name="Digite seu Peso:" id="pesoInput" class="caixa">
-        <br>
-        <p>Altura: </p>
-        <input type="text" name="Digite sua altura:" id="alturaInput" class="caixa">
-        <br>
-    </div>
-    <button class="botao" onclick="verificaInput()">Calcular</button>
-<p id="resultado" class="card" style="font-weight: bold"></p>
-
-
-</div>
+<main>
+    <section>
+        <div class="titulo">Calculadora de IMC</div>
+        <div class="container" id="contForm">
+            <div type="card">
+                <p>Peso: </p>
+                <input type="text" name="Digite seu Peso:" id="pesoInput" class="caixa">
+                <br>
+                <p>Altura: </p>
+                <input type="text" name="Digite sua altura:" id="alturaInput" class="caixa">
+                <br>
+            </div>
+            <button class="botao" onclick="verificaInput()">Calcular</button>
+            <p id="resultado" class="card" style="font-weight: bold"></p>
+        </div>
+    </section>
+</main>
 <script>
     function verificaInput() {
 
@@ -28,7 +30,7 @@
         if (document.getElementById("pesoInput").value == null || document.getElementById("alturaInput").value == null) {
             alert("Você deve digitar os dados primeiro")
         }
-         else {
+        else {
             calculaIMC();
         }
     }
